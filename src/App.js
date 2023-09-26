@@ -12,10 +12,19 @@ const list_etudiants = [
 ]
 
 
+function Component1 (){
+  return <ul>
+    {
+      list_etudiants.map(e => 
+      <li>{e.nom} - Moyenne : {((e.math+e.phys+e.fr)/3).toFixed(2)}</li>)
+    }
+  </ul>
+}
+
 function App() {
   return (
     <div className="App">
-     
+        <Component1 />
     </div>
   );
 }
