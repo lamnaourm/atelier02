@@ -1,3 +1,4 @@
+import { Component } from 'react';
 import './App.css';
 
 const list_etudiants = [
@@ -12,19 +13,47 @@ const list_etudiants = [
 ]
 
 
-function Component1 (){
+function Component1() {
   return <ul>
     {
-      list_etudiants.map(e => 
-      <li>{e.nom} - Moyenne : {((e.math+e.phys+e.fr)/3).toFixed(2)}</li>)
+      list_etudiants.map(e =>
+        <li>{e.nom} - Moyenne : {((e.math + e.phys + e.fr) / 3).toFixed(2)}</li>)
     }
   </ul>
+}
+
+class Component2 extends Component {
+  
+  render() {
+    return <table>
+      <tr>
+        <th>Nom</th>
+        <th>Math</th>
+        <th>Phys</th>
+        <th>Fr</th>
+        <th>Moyenne</th>
+      </tr>
+      {
+        list_etudiants.map(e => 
+          <tr>
+            <td>{e.nom}</td>
+            <td>{e.math}</td>
+            <td>{e.phys}</td>
+            <td>{e.fr}</td>
+            <td>{((e.math + e.phys + e.fr) / 3).toFixed(2)}</td>
+          </tr>
+          )
+      }
+    </table>
+  }
 }
 
 function App() {
   return (
     <div className="App">
-        <Component1 />
+      <Component1 />
+      <hr />
+      <Component2 />
     </div>
   );
 }
