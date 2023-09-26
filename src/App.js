@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+
+const list_etudiants = [
+  { nom: 'manar', math: 10.5, phys: 12, fr: 16 },
+  { nom: 'Mohamed', math: 13, phys: 18, fr: 7 },
+  { nom: 'Khalid', math: 15, phys: 15, fr: 13 },
+  { nom: 'Ikbal', math: 11, phys: 9, fr: 15 },
+  { nom: 'Aziz', math: 17, phys: 12, fr: 6 },
+  { nom: 'Said', math: 14, phys: 7, fr: 6 },
+  { nom: 'Moujahid', math: 16, phys: 17, fr: 9 },
+  { nom: 'Riyad', math: 19, phys: 11, fr: 10 }
+]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
     </div>
   );
 }
